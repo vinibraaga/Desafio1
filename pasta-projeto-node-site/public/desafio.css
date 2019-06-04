@@ -1,0 +1,138 @@
+
+body{
+    background-image: url(matematica.png);
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.menu{  
+    position: relative;
+    top:430px;
+    left: 900px;
+    width: 400px;
+    color: white;
+    /* border: solid 1px; */
+}
+.tmat{
+    position: relative;
+    top:30px; 
+    left: 500px;
+    /* border: solid 1px; */
+    width: 350px;
+    font-size: 30px;
+    color:white;
+}
+
+.sobre{
+    position: relative;
+    border: solid 1px;
+    top: 450px;
+    font-size: 22px;
+    color:white;
+    background-color: #ffa323;
+    border-radius: 10px;
+}
+.psobre{
+    padding: 20px;
+}
+.curism{
+    position: relative;
+    border: solid 1px;
+    background-color: #ffa323;
+    padding: 20px;
+    top:470px;
+    color:white;
+    font-size: 22px;
+    border-radius: 10px;
+}
+.tsoma{
+    background-color: #ffa323;
+    position: relative;
+    top:470px;
+    left: 400px;
+    text-align: center;
+    /* border: solid 1px; */
+    width: 600px;
+    color:white;
+    font-size: 30px;
+    border-radius: 10px;
+}
+.soma{
+    position: relative;
+    top:480px;
+    padding:20px; 
+    left:500px; 
+    border:solid 2px; 
+    width: 330px;  
+    border-radius: 20px;
+    height: 220px; 
+    font-size: 22px;
+    color:white;
+    background-color: #ffa323;
+}
+
+.tmult{
+    position: relative;
+    top:540px;
+    left: 320px;
+    /* border: solid 1px; */
+    width: 750px;
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ffa323;
+}
+.multi{
+    position: relative;
+    padding:20px; 
+    top: 550px;
+    left:500px; 
+    border:solid 2px; 
+    width: 330px; 
+    height: 220px; 
+    border-radius: 20px;
+    font-size: 22px;
+    color:white;
+    background-color: #ffa323;
+}
+
+.sdivi{
+    position: relative;
+    /* border: solid 1px; */
+    padding: 20px;
+    top:650px;
+    color: white;
+    font-size: 22px;
+    background-color:#f79c1d;
+}
+.s1divi{
+    position: relative;
+    /* border: solid 1px; */
+    padding: 20px;
+    color: white;
+    width: 320px;
+    top:650px;
+    font-size: 22px;
+    background-color:#f79c1d;
+}
+.tdivi{
+    position: relative;
+    /* border: solid 1px; */
+    padding: 20px;
+    width: 620px;
+    top:280px;
+    left: 400px;
+    color:white;
+    font-size: 30px;
+}
+.divi{
+    position: relative;
+    border: solid 1px;
+    border-radius: 20px;
+    padding: 20px;
+    width: 330px;
+    top:280px;
+    left: 550px;
+    color:white;
+    font-size: 22px;
+}

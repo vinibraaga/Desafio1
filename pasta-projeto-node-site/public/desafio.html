@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="desafio.css">
+    <title>MATEMATICA</title>
+</head>
+<div class="teste">
+
+</div>
+<body style="height: 3500px;">
+<font size="5" face="Verdana">
+    <div class="menu">
+        <a href="#tsoma" style="text-decoration:none; color: white">SOMA</a> -
+        <a href="#tmult" style="text-decoration:none; color: white">MULTIPLICAÇÃO</a> -
+        <a href="login.html" style="text-decoration:none; color: white">SAIR</a>
+    </div>
+</font>
+
+        
+    
+    <div class="sobre">
+        <strong class="tmat">TUDO SOBRE MATEMÁTICA</strong>
+    <p class="psobre" align="justify"> 
+        A matemática é uma das matérias mais importantes na nossa vida. Se engana quem acredita que vai 
+        usá-la apenas para tirar uma 
+        boa nota no Enem.
+        Muito pelo contrário, quando você aprende matemática entendendo suas aplicações na vida real, 
+        ela se torna muito mais simples e útil. 
+        Inclusive, depois disso você começa a reparar em problemas matemáticos em todo canto, e a 
+        chance de começar a achar interessante e divertido é grande! 
+    </p>    
+    </div>
+    <div class="curism">
+        <span style="font-size:20px;font-size: 30px;">
+            <b>CURIOSIDADES SOBRE SOMA E MULTIPLICAÇÃO</b>
+        </span> <br>
+        <p align="justify">
+                Uma <b>soma</b> (do latim summa) é a junção de coisas. O termo faz referência à acção e
+                 ao efeito de somar 
+                ou juntar/acrescentar. Para a matemática, a soma é uma operação que permite adicionar uma 
+                quantidade a outra(s) homogénea(s).
+                Enquanto operação matemática, 
+                a soma consiste em juntar pelo menos dois números para obter uma quantidade total. <br> <br>
+               <b>Multiplicação</b> é uma das quatro operações básicas da aritmética. Consiste em uma adição 
+                sucessivas de um mesmo número produzindo um resultado que chamamos de produto.
+                O símbolo da multiplicação pode variar, no entanto tem o mesmo sentido: *, x ou . (ponto). 
+                São formas de representar a multiplicação e você pode encontrá-las por aí. 
+                Dessa forma quando encontrar uma representação da multiplicação assim já sabe do que se trata.
+        </p>
+    </div>
+    <h3 class="tsoma" id="tsoma">TESTE SEU CONHECIMENTO EM SOMA</h3>
+    <div class="soma" id="soma">
+        255+755 = <input type="number" id="soma1" style="width:80px"> <br> <br>
+        598+875 = <input type="number" id="soma2" style="width:80px"> <br> <br>
+        <div id="soma01">O RESULTADO É:</div> <br>
+        <button type="button" onclick="soma()" style="color: blue">
+            VALIDAR
+        </button>
+    </div>
+    
+
+    <h3 class="tmult" id="tmult">TESTE SEU CONHECIMENTO EM MULTIPLICAÇÃO</h3>
+    <div class="multi" id="multi">
+            5*7 = <input type="number" id="mult1" style="width:80px"> <br> <br>
+            8*8 = <input type="number" id="mult2" style="width:80px"> <br> <br>
+            <div id="resulmult">O RESULTADO É:</div> <br>
+            <button type="button" onclick="mul()" style="color: blue">
+                VALIDAR
+            </button>
+    </div>
+    
+    <div class="sdivi">
+    <span style="font-size:20px;color:white;font-size: 30px;">
+        <b>Divisão: Propriedades e Regras dos Sinais</b> 
+    </span>
+    <p align="justify">
+        A <b>Divisão</b> é uma das quatro operações fundamentais da aritmética. 
+        Consiste em dividir dois números, o dividendo e o divisor, que produz dois resultados chamados de quociente e resto.
+        Seu símbolo é o “÷”. No entanto pode variar, por exemplo, 
+        no teclado do computador o símbolo adotado é a barra “/”, em outros casos, “:”.
+    </p>
+    </div>
+    <div class="s1divi">
+    <p align="justify">
+        A <b>divisão</b> é o ato de dividir em partes iguais para todos. 
+        O número que está sendo dividido em partes iguais é chamado de dividendo; 
+        o número que indica em quantas vezes vamos dividir é chamado de divisor; 
+        o resultado é chamado de quociente; o que sobra é chamado de resto.
+        Exemplos: 15 ÷ 2 = 7 (sobra 1, portanto tem-se resto 1)
+
+        Leia-se: “Quinze dividido por dois igual a 7”
+    </p>
+    </div>
+
+    <h3 class="tdivi">TESTE SEU CONHECIMENTO EM DIVISÃO</h3>
+    <div class="divi" id="divi">
+        800:400 = <input type="number" id="divi1" style="width:80px"> <br> <br>
+        1400:800 = <input type="number" id="divi2" style="width:80px"> <br> <br>
+        <div id="divi01"></div> <br>
+        <button type="button" onclick="divi()" style="color: blue">
+            VALIDAR
+        </button>
+    </div>
+</body>
+</html>
+<script>
+    
+   var pontos = [];
+
+function soma(){
+    if(Number(soma1.value) == 1010 && Number(soma2.value) == 1473){
+        soma01.innerHTML = 'PARABÉNS, CONTINUE ASSIM !!'
+        pontos.push({
+        soma001:(soma1.value),
+        soma002:(soma2.value)
+    })
+    }
+    else{
+        soma01.innerHTML =  'O CORRETO É 1010 E 1473'; 
+        
+    }
+}
+function mul(){
+    if(Number(mult1.value) != 35 && Number(mult2.value) != 64){
+    resulmult.innerHTML =  'O CORRETO É 35 E 64'; }
+    else{
+    resulmult.innerHTML = 'PARABÉNS, CONTINUE ASSIM !!'
+    }
+}
+function divi(){
+    if(Number(divi1.value) != 2 && Number(divi2.value) != 1.75){
+    divi01.innerHTML =  'O CORRETO É 2 E 1.75'; }
+    else{
+    divi01.innerHTML = 'PARABÉNS, CONTINUE ASSIM !!'
+    }
+}
+</script>

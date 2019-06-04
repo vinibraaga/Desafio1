@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+        <font size="4" face="Verdana" style="position:relative; left:40px">
+            <div class="mensagem">
+                <h2 style="text-align: center">Cadastro</h2>
+            </div>
+            <div class="container">
+                <h2 style="position:relative; left:40px">Faça seu cadastro</h2>
+
+                <spam style="position:relative; left:95px">Nome</spam> <br>
+
+                <input type="text" name="nome" style="position:relative; left:40px"> <br> <br>
+
+                <spam style="position:relative; left:95px">Login</spam> <br>
+
+                <input type="text" name="login" style="position:relative; left:40px"> <br> <br>
+
+                <spam style="position:relative; left:90px">Senha</spam> <br>
+
+                <input type="password" name="senha" style="position:relative; left:40px"> <br> <br>
+
+                <spam style="position:relative; left:15px">Confirme sua senha</spam>
+
+                <input type="password" style="position:relative; left:40px"> <br> <br>
+
+                <button id="btn_entrar" style="margin-left: 70px; border-radius: 20px; 
+        height: 23px; width: 100px">
+                    VALIDAR
+                </button>
+    </form>
+    <br>
+    <button type="button" onclick="voltar()" style="margin-left: 70px; border-radius: 20px;
+        height: 23px; width: 100px;">
+        VOLTAR
+    </button>
+
+    </div>
+    </font>
+    
+    <img src="aguarde2.gif" id="img_aguarde" style="display: none;" width="100px">
+    
+    <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+        Erro no cadastro
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+        function cadastrar() {
+            aguardar();
+            var formulario = new URLSearchParams(new FormData(form_cadastro));
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                body: formulario
+            }).then(function (response) {
+                
+                if (response.ok) {
+    
+                    window.location.href='login.html';
+    
+                } else {
+    
+                    console.log('Erro de cadastro!');
+                    response.text().then(function (resposta) {
+                        div_erro.innerHTML = resposta;
+                    });
+                    finalizar_aguardar();
+                }
+            });
+    
+            return false;
+        }
+    
+        function aguardar() {
+            btn_entrar.disabled = true;
+            img_aguarde.style.display='block';
+            div_erro.style.display='none';
+        }
+    
+        function finalizar_aguardar() {
+            btn_entrar.disabled = false;
+            img_aguarde.style.display='none';
+            div_erro.style.display='block';
+        }
+        function voltar(){
+        window.location.href = "login.html"
+ }
+</script>
+    </script>

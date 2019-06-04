@@ -1,0 +1,42 @@
+body{ 
+    width: 400px;
+    height: 200px;
+    background-image: url(fundo.png);
+    background-repeat: no-repeat;
+    background-size: 1500px
+}
+.container img{
+position: relative;
+left: 370px;
+height: 400px;
+width: 600px;
+top: 100px;
+border-radius: 20px;
+}
+.container h2{
+    position: relative;
+    left:450px;
+    top:50px;
+    width: 500px;
+    /* border: solid; */
+    color: white;
+}
+.joestar{
+    text-decoration:none; 
+    position: relative;
+    top:110px;
+    left: 500px;
+    width: 400px;
+    color: white;
+    font-size: 20px;
+}
+.dio{
+    text-decoration:none; 
+    position: relative;
+    top:90px;
+    left: 780px;
+    width: 6000px;
+    /* border: solid; */
+    color: white;
+    font-size: 20px;
+}

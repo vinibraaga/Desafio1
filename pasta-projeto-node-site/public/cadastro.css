@@ -1,0 +1,32 @@
+body{ 
+    width: 400px;
+    height: 200px;
+    background-image: url(jojocad.png);
+    background-repeat: repeat;
+    background-size: 1200px
+}
+
+.container{
+    position: relative;
+    top:15px;
+    left:500px;
+    border: solid 1px; 
+    width:250px; 
+    height: 430px; 
+    padding: 20px;
+    background-color:white; 
+    border-radius: 20px;
+    font-size: 22px;
+}
+.mensagem{
+    position: relative;
+    left: 350px;
+    top: 10px;
+    border: solid 1px; 
+    width:580px; 
+    height: 70px; 
+    padding: 20px;
+    background-color:white; 
+    border-radius: 20px;
+    font-size: 22px;
+}

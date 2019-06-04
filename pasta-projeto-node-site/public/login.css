@@ -1,0 +1,31 @@
+body{ 
+    width: 400px;
+    height: 200px;
+    background-image: url(jojodio.png);
+    background-repeat: no-repeat;
+    background-size: 1500px
+}
+.container{
+    position: relative;
+    top:50px;
+    left:450px;
+    border: solid 1px; 
+    width:350px; 
+    height: 350px; 
+    padding: 20px;
+    background-color:white; 
+    border-radius: 20px;
+    font-size: 22px;
+}
+.mensagem{
+    position: relative;
+    text-align: center;
+    left: 350px;
+    top: 40px;
+    border: solid 1px; 
+    width:580px; 
+    height: 70px; 
+    padding: 20px;
+    background-color:white; 
+    border-radius: 20px;   
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="login.css">
+    <title>LOGIN</title>
+</head>
+
+<body>
+    <div class="mensagem">
+        <h2>DESCUBRA SE VOCÊ É UM JOESTAR</h2>
+    </div>
+    <div class="container">
+        <form id="form_login" method="post" onsubmit="return entrar()">
+            <h2 style="position:relative; left:70px">Faça seu login</h2>
+
+            <span style="position: relative; left:140px">Login</span> <br>
+
+            <input name="login" type="text" id="usuario" style="position: relative; left:85px"> <br> <br> <br>
+
+            <span style="position: relative; left:140px">Senha</span> <br>
+
+            <input name="senha" type="password" id="senha" style="position: relative; left:85px"> <br> <br>
+
+            <button id="btn_entrar" style="position: relative;left: 120px; border-radius: 20px;
+        height: 23px; width: 100px">
+                ENTRAR
+            </button> <br>
+        </form>
+
+        <a href="cadastro.html" style="position: relative; left:125px; top: 20px">
+            cadastre-se
+        </a>
+
+    </div>
+   
+    <img src="aguarde.gif" id="img_aguarde" style="display: none;">
+    
+    <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+        Usuário e/ou senha inválidos!
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+        verificarAutenticacao();
+    
+        function verificarAutenticacao() {
+            if (sessionStorage.usuario_bandtec != undefined) {
+                window.location.href = 'desafiojojo.html';
+            }
+        }
+    
+        function entrar() {
+            aguardar();
+            var formulario = new URLSearchParams(new FormData(form_login));
+            fetch("/usuarios/entrar", {
+                method: "POST",
+                body: formulario
+            }).then(function (response) {
+                
+                if (response.ok) {
+    
+                    response.json().then(function (resposta) {
+    
+                        sessionStorage.usuario_bandtec = resposta.nome;
+                        verificarAutenticacao();
+    
+                    });
+                } else {
+    
+                    console.log('Erro de login!');
+                    finalizar_aguardar();
+                }
+            });
+    
+            return false;
+        }
+    
+        function aguardar() {
+            btn_entrar.disabled = true;
+            img_aguarde.style.display='block';
+            div_erro.style.display='none';
+        }
+    
+        function finalizar_aguardar() {
+            btn_entrar.disabled = false;
+            img_aguarde.style.display='none';
+            div_erro.style.display='block';
+        }
+    
+    </script>
