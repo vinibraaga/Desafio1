@@ -11,37 +11,39 @@
 
 <body>
     <div class="mensagem">
-        <h2>DESCUBRA SE VOCÊ É UM JOESTAR</h2>
+        <h2>Aprenda um pouco sobre assuntos de TI <br> BandTec</h2>
     </div>
     <div class="container">
         <form id="form_login" method="post" onsubmit="return entrar()">
-            <h2 style="position:relative; left:70px">Faça seu login</h2>
+            <h2 style="position: relative; top:150px">Faça seu login</h2>
 
-            <span style="position: relative; left:140px">Login</span> <br>
+            <span style="position: relative; top:150px">Login</span> <br>
 
-            <input name="login" type="text" id="usuario" style="position: relative; left:85px"> <br> <br> <br>
+            <input name="login" type="text" id="usuario" style="position: relative; top:150px">
+             <br> <br> <br>
 
-            <span style="position: relative; left:140px">Senha</span> <br>
+            <span style="position: relative; top:150px">Senha</span> <br>
 
-            <input name="senha" type="password" id="senha" style="position: relative; left:85px"> <br> <br>
+            <input name="senha" type="password" id="senha" style="position: relative; top:150px"> 
+            <br> <br>
 
-            <button id="btn_entrar" style="position: relative;left: 120px; border-radius: 20px;
-        height: 23px; width: 100px">
+            <button id="btn_entrar" style="position: relative; top:150px">
                 ENTRAR
             </button> <br>
         </form>
 
-        <a href="cadastro.html" style="position: relative; left:125px; top: 20px">
+        <a href="cadastro.html" style="position: relative; top:200px">
             cadastre-se
         </a>
-
+        <img src="aguarde4.gif" id="img_aguarde" style="display: none; position: relative; right: 550px;">
+    
+        <div id="div_erro" style="position: relative;right: 550px; background-color: white; color:black; display: none;">
+            Usuário e/ou senha inválidos!
+        </div>
     </div>
    
-    <img src="aguarde.gif" id="img_aguarde" style="display: none;">
     
-    <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
-        Usuário e/ou senha inválidos!
-    </div>
+    
 
 </body>
 
