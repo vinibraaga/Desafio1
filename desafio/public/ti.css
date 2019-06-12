@@ -2,15 +2,15 @@ body{
     width: 400px;
     height: 200px;
     background-image: url(fundo.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 1550px
 }
 .container h2{
     position: relative;
-    left:90px;
+    left:70px;
     top: 50px;
     border: solid;
-    width: 500px;
+    width: 690px;
     color: white;
 }
 .bsair{
@@ -18,11 +18,10 @@ body{
    color: black;
     width: 70px;
     height: 20px;
-    bottom: 55px;
 }
 .container2{
     position: relative;
-    bottom: 90px;
+    bottom:3755px;
     left:890px;
     border: solid 1px; 
     width:350px; 
@@ -36,4 +35,17 @@ body{
 .container2 a{
     text-decoration:none;
     color: black;
+}
+.cloud{
+    position: relative;
+    top:50px;
+    left: 70px;
+    border-radius: 10px;
+}
+.containertext{
+    position: relative;
+    top: 50px;
+    left: 25px;
+    width: 800px;
+    color: white;
 }
