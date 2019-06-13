@@ -19,7 +19,7 @@
 
             <span style="position: relative; top:150px">Login</span> <br>
 
-            <input name="login" type="text" id="usuario" style="position: relative; top:150px">
+            <input name="login" type="text" id="login" style="position: relative; top:150px">
              <br> <br> <br>
 
             <span style="position: relative; top:150px">Senha</span> <br>
@@ -37,9 +37,7 @@
         </a>
         <img src="aguarde4.gif" id="img_aguarde" style="display: none; position: relative; right: 550px;">
     
-        <div id="div_erro" style="position: relative;right: 550px; background-color: white; color:black; display: none;">
-            Usuário e/ou senha inválidos!
-        </div>
+      
     </div>
    
     
@@ -66,8 +64,11 @@
                 method: "POST",
                 body: formulario
             }).then(function (response) {
-                
-                if (response.ok) {
+                if (login.value=="" || senha.value==""){
+                    alert('Preencha todos os campos')
+                    window.location.href='login.html';
+                } 
+                else if (response.ok) {
     
                     response.json().then(function (resposta) {
     
@@ -76,7 +77,7 @@
     
                     });
                 } else {
-    
+                    alert('Usuário e/ou senha inválidos!')
                     console.log('Erro de login!');
                     finalizar_aguardar();
                 }
@@ -87,14 +88,12 @@
     
         function aguardar() {
             btn_entrar.disabled = true;
-            img_aguarde.style.display='block';
-            div_erro.style.display='none';
+            img_aguarde.style.display='block'; 
         }
     
         function finalizar_aguardar() {
             btn_entrar.disabled = false;
-            img_aguarde.style.display='none';
-            div_erro.style.display='block';
+            img_aguarde.style.display='none';  
         }
     
     </script>

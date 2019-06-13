@@ -18,15 +18,15 @@
 
                 <spam style="position:relative;">Nome</spam> <br>
 
-                <input type="text" name="nome" style="position:relative;"> <br> <br>
+                <input type="text" id="nome" name="nome"> <br> <br>
 
                 <spam style="position:relative;">Login</spam> <br>
 
-                <input type="text" name="login" style="position:relative;"> <br> <br>
+                <input type="text" id="login1" name="login"> <br> <br>
 
                 <spam style="position:relative;">Senha</spam> <br>
 
-                <input type="password" name="senha" style="position:relative;"> <br> <br> 
+                <input type="password" id="senha" name="senha"> <br> <br> 
 
                 <button id="btn_entrar" style="position: relative; border-radius: 20px; width: 70px; left:2px;">
                     VALIDAR
@@ -41,9 +41,6 @@
     
     <img src="aguarde2.gif" id="img_aguarde" style="display: none;" width="100px">
     
-    <div id="div_erro" style="background-color: white; color:black; display: none;">
-        Erro no cadastro
-    </div>
 
 </body>
 
@@ -58,13 +55,16 @@
                 method: "POST",
                 body: formulario
             }).then(function (response) {
-                
-                if (response.ok) {
+                if (nome.value =="" || login1.value=="" || senha.value=="") {
+                    alert('Preencha todos os campos')
+                    window.location.href='cadastro.html';
+                } 
+                else if (response.ok) {
     
                     window.location.href='login.html';
     
                 } else {
-    
+                    alert('Erro no cadastro')
                     console.log('Erro de cadastro!');
                     response.text().then(function (resposta) {
                         div_erro.innerHTML = resposta;
@@ -78,14 +78,12 @@
     
         function aguardar() {
             btn_entrar.disabled = true;
-            img_aguarde.style.display='block';
-            div_erro.style.display='none';
+            img_aguarde.style.display='block';  
         }
     
         function finalizar_aguardar() {
             btn_entrar.disabled = false;
             img_aguarde.style.display='none';
-            div_erro.style.display='block';
         }
         function voltar(){
         window.location.href = "login.html"
