@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,43 @@
     <link rel="stylesheet" href="jojo.css">
     <title>Jojo</title>
 </head>
+
 <body>
     <div class="container">
-       <h2>Aprenda um pouco com os conteudos Bandtec</h2>
+        <h2>Aprenda um pouco com os conteudos Bandtec</h2>
 
     </div>
-
+    <span id="ola"></span>
     <button onclick="logoff()" class="bsair">Sair</button>
 
     <div class="container2">
-       <a href="ti.html"> <h2>TI</h2></a> <br>
-        <a href=""> <h2>BDA</h2> </a> <br>
-        <a href=""> <h2>ALGORITMO</h2> </a><br>
-        <a href=""> <h2>ARQUI COMP</h2> </a> <br>
-        <a href=""> <h2>SOCIOEMOCIONAL </h2> </a><br>
+        <a href="ti.html">
+            <h2>TI</h2>
+        </a> <br>
+        <a href="">
+            <h2>BDA</h2>
+        </a> <br>
+        <a href="">
+            <h2>ALGORITMO</h2>
+        </a><br>
+        <a href="">
+            <h2>ARQUI COMP</h2>
+        </a> <br>
+        <a href="">
+            <h2>SOCIOEMOCIONAL </h2>
+        </a><br>
     </div>
 </body>
+
 </html>
 <script>
     function logoff() {
         sessionStorage.removeItem('usuario_bandtec');
         window.location.href = 'login.html';
     }
+    function mostrarNome() {
+        ola.innerHTML = `Olá ${sessionStorage.usuario_bandtec}`;
+
+    } mostrarNome();
+
 </script>

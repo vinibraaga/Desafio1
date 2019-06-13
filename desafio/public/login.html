@@ -11,7 +11,7 @@
 
 <body>
     <div class="mensagem">
-        <h2>Aprenda um pouco sobre assuntos de TI <br> BandTec</h2>
+        <h2>Aprenda um pouco sobre assuntos da faculdade <br> BandTec</h2>
     </div>
     <div class="container">
         <form id="form_login" method="post" onsubmit="return entrar()">
@@ -64,11 +64,7 @@
                 method: "POST",
                 body: formulario
             }).then(function (response) {
-                if (login.value=="" || senha.value==""){
-                    alert('Preencha todos os campos')
-                    window.location.href='login.html';
-                } 
-                else if (response.ok) {
+                if (response.ok) {
     
                     response.json().then(function (resposta) {
     

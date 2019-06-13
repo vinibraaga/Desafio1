@@ -8,11 +8,11 @@ body{
 }
 .container{
     position: relative;
-    bottom: 155px;
+    bottom: 115px;
     left:890px;
     border: solid 1px; 
     width:350px; 
-    height: 650px; 
+    height: 620px; 
     padding: 20px;
     background-color:white; 
     text-align: center;

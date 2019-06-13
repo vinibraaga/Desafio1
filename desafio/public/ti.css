@@ -9,7 +9,7 @@ body{
     position: relative;
     left:70px;
     top: 50px;
-    border: solid;
+    /* border: solid; */
     width: 690px;
     color: white;
 }
@@ -21,7 +21,7 @@ body{
 }
 .container2{
     position: relative;
-    bottom:3755px;
+    bottom:4505px;
     left:890px;
     border: solid 1px; 
     width:350px; 
@@ -48,4 +48,5 @@ body{
     left: 25px;
     width: 800px;
     color: white;
+    font-size: 18px;
 }
