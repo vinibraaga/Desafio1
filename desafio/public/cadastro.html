@@ -12,35 +12,35 @@
 <body>
 
     <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
-          
-            <div class="container">
-                <h2 style="position:relative;">Faça seu cadastro</h2>
 
-                <spam style="position:relative;">Nome</spam> <br>
+        <div class="container">
+            <h2 style="position:relative;">Faça seu cadastro</h2>
 
-                <input type="text" id="nome" name="nome"> <br> <br>
+            <spam style="position:relative;">Nome</spam> <br>
 
-                <spam style="position:relative;">Login</spam> <br>
+            <input type="text" id="nome" name="nome"> <br> <br>
 
-                <input type="text" id="login1" name="login"> <br> <br>
+            <spam style="position:relative;">Login</spam> <br>
 
-                <spam style="position:relative;">Senha</spam> <br>
+            <input type="text" id="login1" name="login"> <br> <br>
 
-                <input type="password" id="senha" name="senha"> <br> <br> 
+            <spam style="position:relative;">Senha</spam> <br>
 
-                <button id="btn_entrar" style="position: relative; border-radius: 20px; width: 70px; left:2px;">
-                    VALIDAR
-                </button>
+            <input type="password" id="senha" name="senha"> <br> <br>
+
+            <button id="btn_entrar" style="position: relative; border-radius: 20px; width: 70px; left:2px;">
+                VALIDAR
+            </button>
     </form>
-                <br>
-                <button type="button" onclick="voltar()" style="border-radius: 20px;width: 70px; ">
-                VOLTAR
-                </button>
+    <br>
+    <button type="button" onclick="voltar()" style="border-radius: 20px;width: 70px; ">
+        VOLTAR
+    </button>
 
     </div>
-    
+
     <img src="aguarde2.gif" id="img_aguarde" style="display: none;" width="100px">
-    
+
 
 </body>
 
@@ -48,45 +48,41 @@
 
 <script>
 
-        function cadastrar() {
-            aguardar();
-            var formulario = new URLSearchParams(new FormData(form_cadastro));
-            fetch("/usuarios/cadastrar", {
-                method: "POST",
-                body: formulario
-            }).then(function (response) {
-                if (nome.value =="" || login1.value=="" || senha.value=="") {
-                    alert('Preencha todos os campos')
-                    window.location.href='cadastro.html';
-                } 
-                else if (response.ok) {
-    
-                    window.location.href='login.html';
-    
-                } else {
-                    alert('Erro no cadastro')
-                    console.log('Erro de cadastro!');
-                    response.text().then(function (resposta) {
-                        div_erro.innerHTML = resposta;
-                    });
-                    finalizar_aguardar();
-                }
-            });
-    
-            return false;
-        }
-    
-        function aguardar() {
-            btn_entrar.disabled = true;
-            img_aguarde.style.display='block';  
-        }
-    
-        function finalizar_aguardar() {
-            btn_entrar.disabled = false;
-            img_aguarde.style.display='none';
-        }
-        function voltar(){
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            if (response.ok) {
+
+                window.location.href = 'login.html';
+
+            } else {
+                alert('Erro no cadastro')
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    // div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display = 'block';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display = 'none';
+    }
+    function voltar() {
         window.location.href = "login.html"
- }
+    }
 </script>
-    </script>
+</script>
