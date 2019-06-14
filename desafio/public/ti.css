@@ -7,21 +7,16 @@ body{
 }
 .container h2{
     position: relative;
-    left:70px;
+    left:40px;
     top: 50px;
     /* border: solid; */
-    width: 690px;
+    width: 840px;
     color: white;
-}
-.bsair{
-    position: relative;
-   color: black;
-    width: 70px;
-    height: 20px;
+    font-family: Tahoma;
 }
 .container2{
     position: relative;
-    bottom:4505px;
+    bottom:4890px;
     left:890px;
     border: solid 1px; 
     width:350px; 
@@ -30,7 +25,7 @@ body{
     background-color:white; 
     text-align: center;
     font-size: 22px;
-
+    font-family: Tahoma;
 }
 .container2 a{
     text-decoration:none;
@@ -49,4 +44,10 @@ body{
     width: 800px;
     color: white;
     font-size: 18px;
+    font-family: Tahoma;
+}
+.container2 h2{
+    position: relative;
+    top:155px;
+    font-family: Tahoma;
 }

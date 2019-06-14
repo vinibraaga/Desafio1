@@ -8,27 +8,30 @@ body{
 #ola{
     position: relative;
     color: white;
-    bottom: 50px;
+    font-size: 22px;
 }
 .container h2{
     position: relative;
-    left:90px;
-    top: 50px;
+    left:50px;
+    top: 250px;
     /* border: solid; */
-    width: 500px;
+    width: 1000px;
     color: white;
+    font-size: 35px;
+    font-family: Tahoma; 
 }
 .bsair{
     position: relative;
-   color: black;
+    color: white;
+    top: 480px;
     width: 70px;
     height: 20px;
-    bottom: 20px;
-    right: 65px;
+    font-size: 25px;
+    font-family: Tahoma;
 }
 .container2{
     position: relative;
-    bottom: 90px;
+    bottom: 161px;
     left:890px;
     border: solid 1px; 
     width:350px; 
@@ -37,9 +40,27 @@ body{
     background-color:white; 
     text-align: center;
     font-size: 22px;
+    font-family: Tahoma;     
 
 }
 .container2 a{
     text-decoration:none;
     color: black;
+}
+.container2 h2{
+    position: relative;
+    top:50px;
+}
+.cloud{
+    position: relative;
+    top: 50px;
+    width: 300px;
+    border-radius: 20px;
+    background-blend-mode: soft-light;
+}
+.banco{
+    position: relative;
+    top: 50px;
+    width: 300px;
+    border-radius: 20px;
 }
