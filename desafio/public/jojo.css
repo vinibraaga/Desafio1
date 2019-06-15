@@ -1,9 +1,10 @@
 body{ 
     width: 400px;
-    height: 200px;
-    background-image: url(fundo.jpg);
+    height: 800px;
+    /* background-image: url(index.jpg);
     background-repeat: repeat;
-    background-size: 1550px
+    background-size: 1050px */
+    background-color: #0a0a53;
 }
 #ola{
     position: relative;
@@ -12,8 +13,8 @@ body{
 }
 .container h2{
     position: relative;
-    left:50px;
-    top: 250px;
+    left:280px;
+    top: 50px;
     /* border: solid; */
     width: 1000px;
     color: white;
@@ -22,30 +23,33 @@ body{
 }
 .bsair{
     position: relative;
+    left: 1250px;
+    bottom: 25px;
     color: white;
-    top: 480px;
     width: 70px;
     height: 20px;
-    font-size: 25px;
+    font-size: 22px;
     font-family: Tahoma;
+    text-decoration: none;
 }
 .container2{
     position: relative;
-    bottom: 161px;
-    left:890px;
-    border: solid 1px; 
+    bottom: 60px;
+    left:500px;
+    /* border: solid 1px;  */
     width:350px; 
     height: 610px; 
     padding: 20px;
-    background-color:white; 
+    background-color:transparent; 
     text-align: center;
     font-size: 22px;
-    font-family: Tahoma;     
+    font-family: Tahoma; 
+    border-radius: 20px;    
 
 }
 .container2 a{
     text-decoration:none;
-    color: black;
+    color: white;
 }
 .container2 h2{
     position: relative;
@@ -63,4 +67,22 @@ body{
     top: 50px;
     width: 300px;
     border-radius: 20px;
+}
+.menu{
+    position: relative;
+    bottom: 10px;
+    right: 7px;
+    /* border: solid; */
+    width: 1348px;
+    background-color:#1A196E;
+}
+.ola{
+    position: relative;
+    top: 10px;
+    font-family: Tahoma;
+}
+.cores{
+    position: relative;
+    top: 10px;
+    font-family: Tahoma;
 }

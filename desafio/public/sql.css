@@ -1,6 +1,6 @@
 body{ 
     width: 400px;
-    height:4950px;
+    height:3050px;
     /* background-image: url(index.jpg);
     background-repeat: repeat; */
     background-color: #0a0a53;
@@ -16,7 +16,7 @@ body{
 }
 .container2{
     position: relative;
-    bottom:4800px;
+    bottom:2890px;
     left:890px;
     border: solid 1px; 
     width:350px; 
@@ -36,10 +36,11 @@ body{
     text-decoration:none;
     color: black;
 }
-.cloud{
+.sql{
     position: relative;
     top:50px;
     left: 70px;
+    width: 600px;
     border-radius: 10px;
 }
 .containertext{
@@ -48,12 +49,33 @@ body{
     left: 25px;
     width: 800px;
     color: white;
-    font-size: 18px;
     text-align:justify;
+    font-size: 18px;
     font-family: Tahoma;
 }
 .container2 h2{
     position: relative;
     top:155px;
     font-family: Tahoma;
+}
+.sqlcurso{
+    width: 400px;   
+}
+.banco{
+    width: 300px;
+}
+.cliquicurso{
+    position: relative;
+    bottom:70px;
+}
+.introsel{
+    width: 300px;
+}
+.cliqui{
+    text-decoration:none;
+    color: yellow;
+}
+.cursoemvideo{
+    position: relative;
+    bottom:150px;
 }

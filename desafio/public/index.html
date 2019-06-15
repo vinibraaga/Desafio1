@@ -9,24 +9,32 @@
     <title>Conteudos</title>
 </head>
 
-<body>
-    
-        <span id="ola"></span>
+<body id="fundo">
+    <div class="menu">
+        <span id="ola" class="ola"></span>
         
-    <div class="container">
-        <h2>Aprenda um pouco com os conteudos Bandtec</h2>
+        <form action="#" style="clear: both;" class="cores">
+            <label for="cores" style="font-family: Tahoma; font-size:22px; color:white">Brinque 
+                um pouco com o o fundo do site, Escolha uma cor</label>
+            <input type="color" id="cores">
+        </form>
 
+        <a onclick="logoff()" class="bsair" href="login.html">SAIR</a>
     </div>
 
-    <a onclick="logoff()" class="bsair" href="login.html">SAIR</a>
+    <div class="container">
+        <h2>Aprenda um pouco com os conteudos Bandtec</h2>
+    </div>
+
+    
 
     <div class="container2">
         <a href="ti.html">
             <h2>CLOUD</h2>
             <img src="cloud.jpg" class="cloud">
         </a> <br>
-        <a href="">
-            <h2>DBA</h2>
+        <a href="sql.html">
+            <h2>SQL</h2>
             <img src="banco.png" class="banco">
         </a> <br>
     
@@ -43,5 +51,12 @@
         ola.innerHTML = `Olá ${sessionStorage.usuario_bandtec}`;
 
     } mostrarNome();
+   
+
+    let cor = document.getElementById("cores");
+
+    cor.addEventListener("change", function() {
+    document.getElementById("fundo").style.backgroundColor = cor.value;
+    }, false);
 
 </script>
